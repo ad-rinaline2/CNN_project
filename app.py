@@ -1,5 +1,5 @@
 import streamlit as st 
-#import cv2
+import cv2
 from PIL import Image,ImageEnhance
 import numpy as np 
 import os
@@ -9,10 +9,9 @@ from bokeh.models.widgets import Div
 
 #importing the cnn model+using the CascadeClassifier to use features at once to check if a window is not a face region
 st.set_option('deprecation.showfileUploaderEncoding', False)
-#face_cascade = cv2.CascadeClassifier('frecog/haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('frecog/haarcascade_frontalface_default.xml')
 model = FacialExpressionModel("my_model/model.json", "my_model/model_weights.h5")
-#font = cv2.FONT_HERSHEY_SIMPLEX 
-"""
+font = cv2.FONT_HERSHEY_SIMPLEX 
 #face exp detecting function
 def detect_faces(our_image):
 	new_img = np.array(our_image.convert('RGB'))
@@ -30,7 +29,6 @@ def detect_faces(our_image):
 			cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
 			return img,faces,pred
 
-""" 
 #the main function	
 
 def main():
