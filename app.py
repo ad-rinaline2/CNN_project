@@ -47,25 +47,12 @@ def main():
 		</marquee><br>
 		"""
 		st.markdown(html_temp, unsafe_allow_html=True)
-		st.subheader("Video Demo :")
+		#st.subheader("Video Demo :")
 		st.subheader(":smile: :worried: :fearful: :rage: :hushed:")
-		st.video("https://www.youtube.com/watch?v=M1uyH-DzjGE&t=46s")
 		
 	#if choosing to consult the cnn model performance
 
-	if choice == 'CNN Model Performance':
-		st.title("Face Expression WEB Application :")
-		st.subheader(":smile: :worried: :fearful: :rage: :hushed:")
-		st.subheader("CNN Model :")
-		st.image('images/model.png', width=700)
-		st.subheader("FER2013 Dataset from:")
-		st.text(" https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data")
-		st.image('images/dataframe.png', width=700)
-		st.subheader("Model training results:")
-		st.markdown("Accuracy :chart_with_upwards_trend: :")
-		st.image("images/accuracy.png")
-		st.markdown("Loss :chart_with_downwards_trend: : ")
-		st.image("images/loss.png")
+	
 	#if choosing to detect your face exp , give access to upload the image
 	
 	if choice == 'Detect your Facial expressions':
@@ -105,11 +92,11 @@ def main():
 					if prediction == 'Happy':
 						st.subheader("YeeY!  You are Happy :smile: today , Always Be ! ")
 						st.text("Here is your Recommended video to watch:")
-						st.video("https://www.youtube.com/watch?v=4q1dgn_C0AU&t=24s")
+						#st.video("https://www.youtube.com/watch?v=4q1dgn_C0AU&t=24s")
 					elif prediction == 'Angry':
 						st.subheader("You seem to be angry :rage: today ,Take it easy! ")
 						st.text("Here is your Recommended video to watch:")
-						st.video("https://www.youtube.com/watch?v=d_5DU5opOFk")
+						#st.video("https://www.youtube.com/watch?v=d_5DU5opOFk")
 					elif prediction == 'Disgust':
 						st.subheader("You seem to be Disgust :rage: today! ")
 						st.text("Here is your Recommended video to watch:")
@@ -117,7 +104,7 @@ def main():
 					elif prediction == 'Fear':
 						st.subheader("You seem to be Fearful :fearful: today ,Be couragous! ")
 						st.text("Here is your Recommended video to watch:")
-						st.video("https://www.youtube.com/watch?v=h_D6HhWiTiI")
+						#st.video("https://www.youtube.com/watch?v=h_D6HhWiTiI")
 					elif prediction == 'Neutral':
 						st.subheader("You seem to be Neutral today ,Happy day! ")
 						st.text("Here is your Recommended video to watch:")
@@ -125,7 +112,7 @@ def main():
 					elif prediction == 'Sad':
 						st.subheader("You seem to be Sad :sad: today ,Smile and be happy! ")
 						st.text("Here is your Recommended video to watch:")
-						st.video("https://www.youtube.com/watch?v=ST97BGCi3-w")
+						#st.video("https://www.youtube.com/watch?v=ST97BGCi3-w")
 					elif prediction == 'Surprise':
 						st.subheader("You seem to be surprised today ! ")
 						st.text("Here is your Recommended video to watch:")
